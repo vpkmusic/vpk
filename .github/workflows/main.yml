@@ -1,9 +1,9 @@
-name: vpk
+name: Window 10
 on: [push, workflow_dispatch]
 jobs:
 build:
 runs-on: windows-latest
-timeout-minutes: 99999999999999999
+timeout-minutes: 9999
 steps:
 name: Download
 run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFi
@@ -23,7 +23,7 @@ run: Enable-NetFirewallRule DisplayGroup "Remote Desktop"
 run
 : Set-ItemProperty Path "HKLM\System\CurrentControlSet\Control\Terminal Server\WinStations\R
 run
-: Set-Localuser Name "runneradein" -Password (Convert.To-SecureString AsPlainText "vedpraksh
+: Set-Localuser Name "runneradein" -Password (Convert.To-SecureString AsPlainText "@cyb3rking
 name:
 Create Tunnel
 in:Angrok\ngrok.exe tcp 3389
